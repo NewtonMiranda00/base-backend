@@ -1,9 +1,8 @@
 import { Router } from "express";
+import { todoRoutes } from "./todo";
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-  res.send({ Hello: 'World' });
-});
+routes.use('/todo', todoRoutes)
 
 export { routes };
